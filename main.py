@@ -1,6 +1,7 @@
 import pygame
 
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
+from player import Player
 
 
 def main():
@@ -16,6 +17,9 @@ def main():
                 running = False
 
         screen.fill("black")
+
+        player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+        player.draw(screen)
 
         pygame.display.flip()
 
